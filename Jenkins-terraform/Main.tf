@@ -68,7 +68,7 @@ resource "aws_instance" "web" {
   iam_instance_profile   = aws_iam_instance_profile.example_profile.name
 
   tags = {
-    Name = "Jenkins-sonar"
+    Name = "Jenkins-ARGO"
   }
 
   root_block_device {
