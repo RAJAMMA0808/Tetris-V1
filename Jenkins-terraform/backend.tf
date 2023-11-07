@@ -1,6 +1,6 @@
 terraform {
  backend "s3" {
-    bucket = "great-name-terraform-state-2"
+    bucket = "great-name-terraform-state-1"
     key    = "global/s3/terraform.tfstate"
     region = "us-east-1"
     access_key = "AKIAWGGXJJWKPUDUVPD2"
