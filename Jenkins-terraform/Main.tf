@@ -1,5 +1,5 @@
 resource "aws_iam_role" "example_role" {
-  name = "Raji0808"
+  name = "Jenkins-terraform"
 
   assume_role_policy = <<EOF
 {
