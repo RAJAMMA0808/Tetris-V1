@@ -1,9 +1,9 @@
 terraform {
  backend "s3" {
-    bucket = "great-name-terraform-state-1"
-    key    = "global/s3/terraform.tfstate"
+    bucket = "benson2"
+    key    = "Jenkins/terraform.tfstate"
     region = "us-east-1"
-    access_key = "AKIAWGGXJJWKPUDUVPD2"
-    secret_key = "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"
+    access_key = "AKIAWGGXJJWKFP3PWU4Z"
+    secret_key = "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"
   }
 }
