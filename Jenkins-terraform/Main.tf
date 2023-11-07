@@ -23,7 +23,7 @@ resource "aws_iam_role_policy_attachment" "example_attachment" {
 }
 
 resource "aws_iam_instance_profile" "example_profile" {
-  name = "Raji0808"
+  name = "Jenkins-terraform"
   role = aws_iam_role.example_role.name
 }
 
