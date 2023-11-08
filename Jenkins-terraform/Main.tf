@@ -28,8 +28,8 @@ resource "aws_iam_instance_profile" "example_profile" {
 }
 
 
-resource "aws_security_group" "Jenkins-sg" {
-  name        = "Jenkins-Security Group"
+resource "aws_security_group" "Jenkins-sg1" {
+  name        = "Jenkins-Security Group1"
   description = "Open 22,443,80,8080,9000"
 
   # Define a single ingress rule to allow traffic on all specified ports
@@ -55,7 +55,7 @@ resource "aws_security_group" "Jenkins-sg" {
   }
 
   tags = {
-    Name = "Jenkins-sg"
+    Name = "Jenkins-sg1"
   }
 }
 
@@ -63,7 +63,7 @@ resource "aws_instance" "web" {
   ami                    = "ami-0fc5d935ebf8bc3bc"
   instance_type          = "t2.large"
   key_name               = "SSH-KEY-Rajan"
-  vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
+  vpc_security_group_ids = [aws_security_group.Jenkins-sg1.id]
   user_data              = templatefile("./install_jenkins.sh", {})
   iam_instance_profile   = aws_iam_instance_profile.example_profile.name
 
