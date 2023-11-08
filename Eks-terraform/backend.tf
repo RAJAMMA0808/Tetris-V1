@@ -1,9 +1,9 @@
 terraform {
- backend "s3" {
-    bucket = "benson2"
-    key    = "Jenkins/terraform.tfstate"
+  backend "s3" {
+    bucket = "saritha1" # Replace with your actual S3 bucket name
+    key    = "EKS/terraform.tfstate"
+    access_key = "AKIAWGGXJJWKL2VWAEIR"
+    secret_key = "4Pxvw+xnOocrljx7yt7l5uTgBMFqno9NvM7zVGtv"
     region = "us-east-1"
-    access_key = "AKIAWGGXJJWKFP3PWU4Z"
-    secret_key = "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"
   }
 }
